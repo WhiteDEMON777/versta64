@@ -13,7 +13,7 @@
         <img src="~/static/img/picture/moto.png" alt="" class="sliderHeader__slide-img" />
       </div>
     </swiper-slide>
-    <swiper-slide data-name="владивосток" class="sliderHeader__slide">
+    <swiper-slide data-name="КАМЫШИН" class="sliderHeader__slide">
       <div class="sliderHeader__slide-container">
         <div class="sliderHeader__slide-item">
           <div class="sliderHeader__slide-title">Верста MC г.Cаратов</div>
@@ -39,9 +39,9 @@
         <img src="~/static/img/picture/moto.png" alt="" class="sliderHeader__slide-img" />
       </div>
     </swiper-slide>
-    <div slot="button-prev" class="swiper-button-prev sliderHeader__prev"></div>
+    <div slot="button-prev" class="swiper-button-prev sliderHeader__prev icon-arrow"></div>
     <div slot="pagination" class="swiper-pagination swiper-pagination-bullets sliderHeader__pagination"></div>
-    <div slot="button-next" class="swiper-button-next sliderHeader__next"></div>
+    <div slot="button-next" class="swiper-button-next sliderHeader__next icon-arrow"></div>
   </swiper>
 </template>
 
@@ -51,6 +51,7 @@ export default {
   data() {
     return {
       swiperOption: {
+        loop: true,
         pagination: {
           el: '.sliderHeader__pagination',
           clickable: true,

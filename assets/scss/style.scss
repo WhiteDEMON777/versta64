@@ -91,8 +91,8 @@ input:-webkit-autofill:active {
   &__logo {
     background: url('~/static/img/icon/logoVersta.png') no-repeat;
     background-size: contain;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
   }
   &__list {
     display: flex;
@@ -123,6 +123,7 @@ input:-webkit-autofill:active {
 .top {
   @include container();
   @include fluid(margin-top, 10px, 25px);
+  @include fluid(margin-bottom, 30px, 80px);
   &__logo {
     background: url('../../static/img/picture/logoText.png') no-repeat;
     background-size: contain;
@@ -133,16 +134,21 @@ input:-webkit-autofill:active {
 }
 
 .sliderHeader {
+  margin-top: 20px;
   &__slide {
+    @include fluid(margin-bottom, 30px, 60px);
     &-item {
-      width: 54%;
+      width: 46%;
     }
     &-container {
       display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     &-title {
-      @include fluid(font-size, 28px, 64px);
+      @include fluid(font-size, 28px, 52px);
       @include fluid(margin-bottom, 15px, 30px);
+      font-weight: 700;
     }
     &-text {
       color: #dde0ea;
@@ -150,9 +156,210 @@ input:-webkit-autofill:active {
       @include fluid(margin-bottom, 20px, 60px);
     }
     &-img {
-      width: 46%;
+      width: 53%;
+      object-fit: contain;
+      object-position: top;
+      height: 400px;
+      filter: drop-shadow(-114px 40px 87px rgba(228, 17, 17, 0.05));
+    }
+  }
+  &__prev,
+  &__next {
+    color: #ffffff;
+    font-size: 20px;
+    transition: color 0.38s ease-in-out;
+    top: auto;
+    right: auto;
+    position: relative;
+    display: block;
+    bottom: 7px;
+    width: 15px;
+    height: 30px;
+    &:hover {
+      color: #e41111;
+    }
+  }
+  &__next {
+    left: 31%;
+  }
+  &__prev {
+    transform: rotate(180deg);
+    left: 0;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: auto;
+  height: auto;
+  @include fluid(font-size, 14px, 16px);
+  text-transform: uppercase;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+  @include fluid(padding-left, 5px, 10px);
+  @include fluid(padding-right, 5px, 10px);
+  transition: filter 0.38s ease-in-out;
+  &:hover {
+    filter: drop-shadow(0px 10px 5px rgba(228, 17, 17, 1));
+  }
+}
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+}
+.swiper-pagination {
+  text-align: left;
+  position: relative;
+  margin-left: 30px;
+}
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: auto;
+  left: auto;
+}
+.swiper-pagination-bullet-active {
+  color: #ffffff;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  &:after {
+    content: none;
+  }
+}
+
+.title {
+  font-weight: 700;
+  @include fluid(font-size, 24px, 44px);
+  @include fluid(padding-bottom, 14px, 18px);
+  padding-bottom: 18px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 160px;
+    @include fluid(height, 4px, 8px);
+    background-color: #e41111;
+    opacity: 0.8;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.text {
+  @include fluid(margin-top, 10px, 20px);
+  @include fluid(font-size, 16px, 18px);
+  color: #dde0ea;
+  width: 70%;
+}
+
+.content {
+  @include container();
+  @include fluid(margin-bottom, 30px, 80px);
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include fluid(margin-top, 25px, 50px);
+  }
+  &__img {
+    object-fit: contain;
+    width: 50%;
+    height: 440px;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 50%;
+  &__item {
+    @include fluid(margin-right, 15px, 20px);
+    @include fluid(margin-bottom, 15px, 20px);
+    position: relative;
+    overflow: hidden;
+    width: 48%;
+    transition: background-color 0.38s ease-in-out;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:hover {
+      background-color: #e41111;
+    }
+    &:hover &-text {
+      @include fluid(bottom, 30px, 60px);
+      bottom: 50px;
+    }
+    &-text {
+      font-weight: 700;
+      @include fluid(font-size, 22px, 36px);
+      color: #ffffff;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      bottom: -100%;
+      transition: bottom 0.38s ease-in-out;
+    }
+    &-img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      height: 460px;
+    }
+  }
+}
+
+.useful {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 32%;
+    @include fluid(padding-top, 15px, 30px);
+    @include fluid(padding-bottom, 15px, 30px);
+    @include fluid(padding-left, 20px, 40px);
+    @include fluid(padding-right, 20px, 40px);
+    @include fluid(margin-right, 15px, 20px);
+    @include fluid(margin-bottom, 15px, 20px);
+    transition: filter 0.38s ease-in-out;
+    background-color: #292929;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &:hover {
+      filter: drop-shadow(0px 15px 10px rgba(228, 17, 17, 0.5));
+    }
+    &:hover &-text {
+      filter: drop-shadow(0px 10px 5px rgba(228, 17, 17, 0.8));
+    }
+    &:hover &-icon {
+      filter: drop-shadow(0px 10px 5px rgba(228, 17, 17, 0.8));
+    }
+    &-icon {
+      object-fit: contain;
+      @include fluid(width, 40px, 50px);
+      @include fluid(height, 40px, 50px);
+      transition: filter 0.38s ease-in-out;
+    }
+    &-text {
+      @include fluid(margin-left, 20px, 40px);
+      font-weight: 500;
+      @include fluid(font-size, 18px, 24px);
+      transition: filter 0.38s ease-in-out;
+    }
+  }
+}
+
+.sliderFrends {
+  &__slide {
+    &-img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+    &-link {
+      height: 250px;
     }
   }
 }

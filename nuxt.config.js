@@ -21,7 +21,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/assets/style-icon.css', '@/assets/scss/style.scss'],
+  css: ['@/assets/style-icon.css', 'swiper/css/swiper.css', '@/assets/scss/style.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['~/plugins/swiper.js'],
