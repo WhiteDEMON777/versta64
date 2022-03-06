@@ -5,15 +5,20 @@
     </header>
     <Nuxt />
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__text">ВСЕ ПРАВА ПРИНАДЛЕЖАТ МОТО-КЛУБУ "VERSTA" MC © 2022.</div>
+      </div>
+    </footer>
   </div>
 </template>
 
 <script>
 import 'animate.css';
-document.documentElement.style.setProperty('--animate-duration', '.38s');
 export default {
   computed: {},
-  mounted() {},
+  mounted() {
+    document.documentElement.style.setProperty('--animate-duration', '.38s');
+  },
 };
 </script>

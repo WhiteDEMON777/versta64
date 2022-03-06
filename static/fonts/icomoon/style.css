@@ -1,16 +1,15 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?pmjmv5');
-  src:  url('fonts/icomoon.eot?pmjmv5#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?pmjmv5') format('truetype'),
-    url('fonts/icomoon.woff?pmjmv5') format('woff'),
+  src: url('fonts/icomoon.eot?pmjmv5');
+  src: url('fonts/icomoon.eot?pmjmv5#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?pmjmv5') format('truetype'), url('fonts/icomoon.woff?pmjmv5') format('woff'),
     url('fonts/icomoon.svg?pmjmv5#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^='icon-'],
+[class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;
@@ -26,14 +25,14 @@
 }
 
 .icon-arrow:before {
-  content: "\e900";
+  content: '\e900';
 }
 .icon-geo:before {
-  content: "\e901";
+  content: '\e901';
 }
 .icon-phone:before {
-  content: "\e902";
+  content: '\e902';
 }
 .icon-vk:before {
-  content: "\e903";
+  content: '\e903';
 }

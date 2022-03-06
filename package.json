@@ -12,15 +12,27 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/proxy": "^2.1.0",
+    "@nuxtjs/recaptcha": "^1.0.4",
+    "@vue/composition-api": "^1.4.5",
     "animate.css": "^4.1.1",
     "core-js": "^3.15.1",
     "nuxt": "^2.15.7",
     "swiper": "5.x",
     "vue-awesome-swiper": "^4.1.1",
-    "vue-imask": "^6.2.2"
+    "vue-clickaway": "^2.2.2",
+    "vue-imask": "^6.2.2",
+    "vue-picture-swipe": "^2.1.0",
+    "vue-select": "^3.16.0",
+    "vueisotope": "^3.1.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
     "@babel/eslint-parser": "^7.14.7",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
     "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
     "eslint": "^7.29.0",
