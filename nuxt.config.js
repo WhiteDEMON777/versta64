@@ -1,7 +1,7 @@
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  // ssr: false,
-  target: 'server',
+  ssr: false,
+  // target: 'server',
   loading: '~/components/Loading.vue',
   // Target: https://go.nuxtjs.dev/config-target
 
@@ -26,7 +26,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { ssr: false, src: '~/plugins/swiper.js' },
-    { ssr: true, src: '~/plugins/vue-select.js' },
+    { ssr: false, src: '~/plugins/vue-select.js' },
     { ssr: false, src: '~/plugins/vue-picture-swipe.js' },
     { ssr: false, src: '~/plugins/isotope.js' },
   ],
@@ -46,26 +46,26 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
     '@nuxtjs/dotenv',
-    [
-      '@nuxtjs/recaptcha',
-      {
-        siteKey: '6LeZZLUeAAAAAJDqY8GkEAXlraXIyypeRlCnJfYt',
-        hideBadge: false,
-        version: 3,
-      },
-    ],
+    // [
+    //   '@nuxtjs/recaptcha',
+    //   {
+    //     siteKey: '6LeZZLUeAAAAAJDqY8GkEAXlraXIyypeRlCnJfYt',
+    //     hideBadge: false,
+    //     version: 3,
+    //   },
+    // ],
   ],
   proxy: {
     // '/api/v1': { target: 'API_URL', pathRewrite: {'^/api/v1': ''} }
     '/wp-admin': {
       target: 'https://admin.versta64.ru',
     },
-    '/captcha-api/': {
-      target: 'https://www.google.com/recaptcha/api',
-      pathRewrite: {
-        '^/captcha-api': '',
-      },
-    },
+    // '/captcha-api/': {
+    //   target: 'https://www.google.com/recaptcha/api',
+    //   pathRewrite: {
+    //     '^/captcha-api': '',
+    //   },
+    // },
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
